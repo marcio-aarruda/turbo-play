@@ -24,3 +24,38 @@ h1, h2, .destaque-gold {
   font-weight: 800;
   text-transform: uppercase;
 }
+.box-beneficios, .card-plano {
+  background-color: var(--fundo-card);
+  border: 2px solid var(--dourado-texto);
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px rgba(204, 164, 59, 0.2); /* Brilho dourado sutil */
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.box-beneficios:hover {
+  box-shadow: 0px 0px 25px rgba(204, 164, 59, 0.5); /* Brilha mais ao passar o mouse */
+}
+.btn-assinar-gold {
+  background: var(--dourado-principal);
+  color: #000000; /* Texto preto para dar contraste no fundo dourado */
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço para o ícone */
+  cursor: pointer;
+  box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.4);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.btn-assinar-gold:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1); /* Dá um efeito de "aceso" */
+}
