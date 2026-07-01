@@ -1,142 +1,145 @@
-:root {
-  --fundo-preto: #000000;
-  --fundo-card: #0a0a0a;
-  
-  /* Degradê Dourado Premium idêntico à imagem */
+/* Configurações Gerais */
+html {
+  --fundo-preto: #050505;
+  --fundo-card: #0d0d0d;
   --dourado-principal: linear-gradient(135deg, #ffe082 0%, #b38f2e 50%, #ffd700 100%);
   --dourado-texto: #e5c158;
-  --dourado-brilho: #cca43b;
-  
   --texto-branco: #ffffff;
-  --texto-cinza: #a0a0a0;
+  --texto-cinza: #b5b5b5;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: var(--fundo-preto);
   color: var(--texto-branco);
-  font-family: 'Montserrat', sans-serif; /* Fonte imponente que combina com dourado */
-}
-
-/* Títulos principais em dourado */
-h1, h2, .destaque-gold {
-  color: var(--dourado-texto);
-  text-shadow: 0px 0px 8px rgba(229, 193, 88, 0.3);
-  font-weight: 800;
-  text-transform: uppercase;
-}
-.box-beneficios, .card-plano {
-  background-color: var(--fundo-card);
-  border: 2px solid var(--dourado-texto);
-  border-radius: 12px;
-  box-shadow: 0px 0px 15px rgba(204, 164, 59, 0.2); /* Brilho dourado sutil */
-  padding: 20px;
-  transition: all 0.3s ease;
-}
-
-.box-beneficios:hover {
-  box-shadow: 0px 0px 25px rgba(204, 164, 59, 0.5); /* Brilha mais ao passar o mouse */
-}
-.btn-assinar-gold {
-  background: var(--dourado-principal);
-  color: #000000; /* Texto preto para dar contraste no fundo dourado */
-  font-size: 1.3rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 18px 40px;
-  border: none;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* Espaço para o ícone */
-  cursor: pointer;
-  box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.4);
-  transition: transform 0.2s, filter 0.2s;
-}
-
-.btn-assinar-gold:hover {
-  transform: scale(1.03);
-  filter: brightness(1.1); /* Dá um efeito de "aceso" */
-}
-/* Container Geral da Seção */
-.container-gold {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-/* Fileira que organiza os 5 itens lado a lado */
-.row-beneficios {
+/* Cabeçalho */
+.header-site {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
-  background-color: #0a0a0a;
-  border: 2px solid #e5c158;
-  border-radius: 14px;
-  padding: 25px 20px;
-  box-shadow: 0px 0px 20px rgba(229, 193, 88, 0.15);
-  margin-bottom: 30px;
-  flex-wrap: wrap; /* Garante que se adapte no celular */
+  padding: 20px 5%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(229, 193, 88, 0.2);
 }
-
-/* Cada quadradinho/bloco de benefício */
-.item-beneficio {
-  flex: 1;
-  min-width: 150px;
-  text-align: center;
-  border-right: 1px solid rgba(229, 193, 88, 0.3); /* Linha divisória entre eles */
-}
-
-.item-beneficio:last-child {
-  border-right: none; /* Remove a linha do último item */
-}
-
-/* Ícones grandes e dourados */
-.icone-gold {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-  filter: drop-shadow(0px 0px 5px rgba(229, 193, 88, 0.5));
-}
-
-/* Textos de dentro dos benefícios */
-.item-beneficio h3 {
-  color: #e5c158;
-  font-size: 0.95rem;
-  font-weight: 800;
-  margin: 0;
+.logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #fff;
   letter-spacing: 1px;
 }
+.logo span {
+  color: var(--dourado-texto);
+}
+.header-site nav a {
+  color: var(--texto-cinza);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+.header-site nav a:hover {
+  color: var(--dourado-texto);
+}
 
-.item-beneficio p {
-  color: #ffffff;
-  font-size: 0.85rem;
-  margin: 2px 0 0 0;
-  font-weight: 500;
+/* Seção de Destaque (Hero) */
+.hero-section {
+  padding: 80px 20px;
+  background: radial-gradient(circle at center, #111 0%, #050505 100%);
+}
+.titulo-principal {
+  color: var(--dourado-texto);
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-shadow: 0px 0px 15px rgba(229, 193, 88, 0.4);
+}
+.subtitulo {
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+/* Grid de Benefícios */
+.container-gold {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.secao-titulo {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
   text-transform: uppercase;
 }
-
-/* Alinhamento do botão */
-.container-btn {
-  margin-top: 25px;
+.row-beneficios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.item-beneficio {
+  background-color: var(--fundo-card);
+  border: 2px solid var(--dourado-texto);
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 220px;
+  box-shadow: 0px 0px 15px rgba(229, 193, 88, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.item-beneficio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 0px 25px rgba(229, 193, 88, 0.3);
+}
+.icone-gold {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.item-beneficio h3 {
+  color: var(--dourado-texto);
+  font-size: 1.1rem;
+  margin: 0 0 10px 0;
+}
+.item-beneficio p {
+  color: var(--texto-cinza);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
 }
 
-/* Responsividade para Celulares */
-@media (max-width: 768px) {
-  .row-beneficios {
-    flex-direction: column;
-    gap: 25px;
-  }
-  .item-beneficio {
-    border-right: none;
-    border-bottom: 1px solid rgba(229, 193, 88, 0.2);
-    padding-bottom: 15px;
-    width: 100%;
-  }
-  .item-beneficio:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
+/* Botão de Ação */
+.btn-assinar-gold {
+  background: var(--dourado-principal);
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  border: none;
+  border-radius: 50px;
+  display: inline-block;
+  text-decoration: none;
+  box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.2s, filter 0.2s;
+}
+.btn-assinar-gold:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Rodapé */
+.footer-site {
+  padding: 30px;
+  border-top: 1px solid rgba(229, 193, 88, 0.1);
+  color: var(--texto-cinza);
+  font-size: 0.85rem;
+  margin-top: 50px;
 }
