@@ -1,59 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Turbo Play</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turbo Play</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
-      color: white;
-      text-align: center;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
 
-    .container {
-      padding: 80px 20px;
-    }
+header {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+}
 
-    h1 {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
+h1 {
+  margin: 0;
+  font-size: 48px;
+}
 
-    p {
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
+p {
+  font-size: 18px;
+  opacity: 0.9;
+}
 
-    .btn {
-      background: #22c55e;
-      color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 18px;
-      display: inline-block;
-    }
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 40px;
+}
 
-    .btn:hover {
-      background: #16a34a;
-    }
-  </style>
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.price {
+  font-size: 28px;
+  margin: 15px 0;
+  color: #22c55e;
+}
+
+.btn {
+  display: inline-block;
+  background: #22c55e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #16a34a;
+}
+
+footer {
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.6;
+}
+</style>
 
 </head>
 
 <body>
 
-  <div class="container">
-    <h1>Turbo Play</h1>
-    <p>Seu site agora está no ar 🚀</p>
+<header>
+  <h1>Turbo Play</h1>
+  <p>Escolha seu plano e comece agora 🚀</p>
+</header>
 
-    <a class="btn" href="https://wa.me/47991838121">
-      Falar no WhatsApp
-    </a>
+<div class="container">
+
+  <div class="card">
+    <h2>Básico</h2>
+    <div class="price">R$35</div>
+    <p>Acesso simples</p>
+    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20plano%20Básico">Comprar</a>
   </div>
+
+  <div class="card">
+    <h2>Intermediário</h2>
+    <div class="price">R$90</div>
+    <p>Mais recursos</p>
+    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20plano%20Intermediário">Comprar</a>
+  </div>
+
+  <div class="card">
+    <h2>Premium</h2>
+    <div class="price">R$25</div>
+    <p>Plano promocional</p>
+    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o plano%20Premium">Comprar</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Turbo Play - Todos os direitos reservados
+</footer>
 
 </body>
 </html>
+<div id="visits">Carregando visitantes...</div>
+
+<script>
+fetch("https://api.countapi.xyz/hit/turbo-play/site")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("visits").innerHTML =
+      "👥 Pessoas já acessaram: " + data.value;
+  });
+</script>
