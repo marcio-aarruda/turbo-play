@@ -59,3 +59,84 @@ h1, h2, .destaque-gold {
   transform: scale(1.03);
   filter: brightness(1.1); /* Dá um efeito de "aceso" */
 }
+/* Container Geral da Seção */
+.container-gold {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Fileira que organiza os 5 itens lado a lado */
+.row-beneficios {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background-color: #0a0a0a;
+  border: 2px solid #e5c158;
+  border-radius: 14px;
+  padding: 25px 20px;
+  box-shadow: 0px 0px 20px rgba(229, 193, 88, 0.15);
+  margin-bottom: 30px;
+  flex-wrap: wrap; /* Garante que se adapte no celular */
+}
+
+/* Cada quadradinho/bloco de benefício */
+.item-beneficio {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  border-right: 1px solid rgba(229, 193, 88, 0.3); /* Linha divisória entre eles */
+}
+
+.item-beneficio:last-child {
+  border-right: none; /* Remove a linha do último item */
+}
+
+/* Ícones grandes e dourados */
+.icone-gold {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  filter: drop-shadow(0px 0px 5px rgba(229, 193, 88, 0.5));
+}
+
+/* Textos de dentro dos benefícios */
+.item-beneficio h3 {
+  color: #e5c158;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.item-beneficio p {
+  color: #ffffff;
+  font-size: 0.85rem;
+  margin: 2px 0 0 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Alinhamento do botão */
+.container-btn {
+  margin-top: 25px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+  .row-beneficios {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .item-beneficio {
+    border-right: none;
+    border-bottom: 1px solid rgba(229, 193, 88, 0.2);
+    padding-bottom: 15px;
+    width: 100%;
+  }
+  .item-beneficio:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
