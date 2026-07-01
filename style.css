@@ -144,14 +144,167 @@ body {
   margin-top: 50px;
 }
 .container-banner {
-    width: 100%;
-    max-width: 600px; /* Controla o tamanho máximo para não estourar na tela */
-    margin: 0 auto 20px auto;
+      width: 100%;
+    margin: 0 auto 30px auto;
+    padding: 0 10px;
 }
 
 .banner-topo {
-    width: 100%;
+   width: 100%;
+    max-width: 1000px; /* Deixei muito maior para destacar no notebook! */
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0px 0px 20px rgba(229, 193, 88, 0.3); /* Brilho dourado em volta da imagem */
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(229, 193, 88, 0.6);
+}
+/* Estilização da Seção de Planos (Imagem 1000354892.png) */
+.secao-planos {
+    padding: 60px 20px;
+    background-color: #050a12; /* Fundo levemente azulado escuro como a foto */
+}
+
+.titulo-planos {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.linha-decorativa {
+    width: 50px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+}
+
+.container-planos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Estrutura Base dos Cards */
+.card-plano {
+    background-color: #0b111e;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 35px 25px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.card-plano:hover {
+    transform: translateY(-5px);
+}
+
+/* Card Destaque de 3 Meses */
+.card-plano.destaque {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 25px rgba(0, 123, 255, 0.2);
+}
+
+.badge-destaque {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 6px 20px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Elementos Internos */
+.icone-plano {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.preco-container {
+    margin-bottom: 15px;
+}
+
+.cifrao {
+    font-size: 1.4rem;
+    font-weight: 700;
+    vertical-align: top;
+    margin-right: 2px;
+}
+
+.preco-valor {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.preco-periodo {
+    display: block;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 5px;
+}
+
+.divisor-card {
+    height: 1px;
+    background-color: #1e293b;
+    margin: 20px 0;
+}
+
+.lista-recursos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+.lista-recursos li {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+}
+
+/* Botão Azul de Compra */
+.btn-plano-wa {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-plano-wa:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+.texto-auxiliar {
+    font-size: 0.8rem;
+    color: #475569;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
