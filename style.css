@@ -1,101 +1,26 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#0b1220;
-    color:white;
+:root {
+  --fundo-preto: #000000;
+  --fundo-card: #0a0a0a;
+  
+  /* Degradê Dourado Premium idêntico à imagem */
+  --dourado-principal: linear-gradient(135deg, #ffe082 0%, #b38f2e 50%, #ffd700 100%);
+  --dourado-texto: #e5c158;
+  --dourado-brilho: #cca43b;
+  
+  --texto-branco: #ffffff;
+  --texto-cinza: #a0a0a0;
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px;
-    background:#111827;
+body {
+  background-color: var(--fundo-preto);
+  color: var(--texto-branco);
+  font-family: 'Montserrat', sans-serif; /* Fonte imponente que combina com dourado */
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#38bdf8;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-}
-
-.hero{
-    text-align:center;
-    padding:120px 20px;
-    background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
-}
-
-.hero h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:20px;
-    margin-bottom:30px;
-}
-
-.btn{
-    background:#22c55e;
-    color:white;
-    padding:14px 25px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.vantagens{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-    padding:60px 20px;
-}
-
-.box{
-    background:#1e293b;
-    padding:25px;
-    border-radius:15px;
-    width:250px;
-}
-
-.planos{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.cards{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
-
-.card{
-    background:#1e293b;
-    width:280px;
-    padding:25px;
-    border-radius:15px;
-}
-
-.destaque{
-    border:2px solid #38bdf8;
-}
-
-.price{
-    font-size:35px;
-    color:#22c55e;
-    margin:15px 0;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:#111827;
+/* Títulos principais em dourado */
+h1, h2, .destaque-gold {
+  color: var(--dourado-texto);
+  text-shadow: 0px 0px 8px rgba(229, 193, 88, 0.3);
+  font-weight: 800;
+  text-transform: uppercase;
 }
