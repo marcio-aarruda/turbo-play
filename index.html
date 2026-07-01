@@ -4,119 +4,52 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Turbo Play</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
-  text-align: center;
-}
-
-header {
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
-}
-
-h1 {
-  margin: 0;
-  font-size: 48px;
-}
-
-p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  padding: 40px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  width: 250px;
-}
-
-.price {
-  font-size: 28px;
-  margin: 15px 0;
-  color: #22c55e;
-}
-
-.btn {
-  display: inline-block;
-  background: #22c55e;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #16a34a;
-}
-
-footer {
-  padding: 20px;
-  font-size: 14px;
-  opacity: 0.6;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Turbo Play</h1>
-  <p>Escolha seu plano e comece agora 🚀</p>
+  <div class="logo">Turbo Play</div>
+  <a class="btn" href="https://wa.me/47991838121">WhatsApp</a>
 </header>
 
-<div class="container">
+<section class="hero">
+  <h1>Turbo Play 🚀</h1>
+  <p>Seu site profissional pronto para vender</p>
+  <a class="btn" href="https://wa.me/47991838121">Falar no WhatsApp</a>
+</section>
 
-  <div class="card">
-    <h2>Básico</h2>
-    <div class="price">R$35</div>
-    <p>Acesso simples</p>
-    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20plano%20Básico">Comprar</a>
+<section class="planos">
+  <h2>Planos</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Básico</h3>
+      <p class="price">R$35</p>
+      <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20Básico">Comprar</a>
+    </div>
+
+    <div class="card">
+      <h3>Intermediário</h3>
+      <p class="price">R$90</p>
+      <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20Intermediário">Comprar</a>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <p class="price">R$25</p>
+      <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20Premium">Comprar</a>
+    </div>
+
   </div>
-
-  <div class="card">
-    <h2>Intermediário</h2>
-    <div class="price">R$90</div>
-    <p>Mais recursos</p>
-    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o%20plano%20Intermediário">Comprar</a>
-  </div>
-
-  <div class="card">
-    <h2>Premium</h2>
-    <div class="price">R$25</div>
-    <p>Plano promocional</p>
-    <a class="btn" href="https://wa.me/47991838121?text=Quero%20o plano%20Premium">Comprar</a>
-  </div>
-
-</div>
+</section>
 
 <footer>
-  © 2026 Turbo Play - Todos os direitos reservados
+  © 2026 Turbo Play
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-<div id="visits">Carregando visitantes...</div>
-
-<script>
-fetch("https://api.countapi.xyz/hit/turbo-play/site")
-  .then(res => res.json())
-  .then(data => {
-    document.getElementById("visits").innerHTML =
-      "👥 Pessoas já acessaram: " + data.value;
-  });
-</script>
