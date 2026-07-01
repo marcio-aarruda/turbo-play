@@ -1,73 +1,101 @@
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0b1220;
-  color: white;
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b1220;
+    color:white;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: #0f172a;
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:#111827;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: #38bdf8;
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
 }
 
-.hero h1 {
-  font-size: 50px;
+.hero{
+    text-align:center;
+    padding:120px 20px;
+    background:linear-gradient(135deg,#1e3a8a,#0ea5e9);
 }
 
-/* PLANOS */
-.planos {
-  text-align: center;
-  padding: 50px 20px;
+.hero h1{
+    font-size:50px;
+    margin-bottom:15px;
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
 }
 
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
-  width: 250px;
+.btn{
+    background:#22c55e;
+    color:white;
+    padding:14px 25px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
 }
 
-.price {
-  font-size: 28px;
-  color: #22c55e;
+.vantagens{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:60px 20px;
 }
 
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  background: #22c55e;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
+.box{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    width:250px;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.6;
+.planos{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    width:280px;
+    padding:25px;
+    border-radius:15px;
+}
+
+.destaque{
+    border:2px solid #38bdf8;
+}
+
+.price{
+    font-size:35px;
+    color:#22c55e;
+    margin:15px 0;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
 }
