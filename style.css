@@ -318,3 +318,18 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+.mobile{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+.mobile{
+display:block;
+}
+
+.menu{
+display:none;
+}
+}
